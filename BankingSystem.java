@@ -5,8 +5,6 @@ public class BankingSystem {
     public static void main(String[] args){
         String name ;
         Long phone;
-            
-
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Kwiss Bank.");
         System.out.println("Have a nice day!\n Have a best financial support!\n\n");
@@ -73,8 +71,8 @@ class Accountant {
     Boolean isDebitCard = false;
     Float amountToAddInCreditCard;
     Float amountToAddInDebitCard;
-    Float amountInCreditCard;
-    Float amountInDebitCard;
+    Float amountInCreditCard = 00f;
+    Float amountInDebitCard = 00f;
     Scanner sc = new Scanner(System.in);
 
 
@@ -278,10 +276,11 @@ class Accountant {
         }
         
     }
+    //remaining to check available balance to add amount in digital card.
     public void amountToCreditCard(){
         if (isCreditCard == true) {
             System.out.println("Enter the amount ");
-            amountToAddInCreditCard = sc.nextInt();
+            amountToAddInCreditCard = sc.nextFloat();
             balance = balance - amountToAddInCreditCard;
             amountInCreditCard = amountInCreditCard + amountToAddInCreditCard;
             System.out.println("Added to Credit Card.");
@@ -292,7 +291,7 @@ class Accountant {
     public void amountToDebitCard(){
         if (isDebitCard == true) {
             System.out.println("Enter the amount ");
-            amountToAddInDebitCard = sc.nextInt();
+            amountToAddInDebitCard = sc.nextFloat();
             balance = balance - amountToAddInDebitCard;
             amountInCreditCard = amountInCreditCard + amountToAddInDebitCard;
             System.out.println("Added to Debit Card.");
